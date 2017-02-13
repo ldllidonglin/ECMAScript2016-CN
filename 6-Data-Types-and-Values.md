@@ -10,4 +10,4 @@ Null类型只有一种值，就是null
 ### 6.1.3 Boolean类型
 Boolean 类型表示逻辑实体，有两个值，true 和 false。
 ### 6.1.4 String类型
-字符串类型
+字符串类型通常被用于表示文本数据，这时String当中的每一个元素都被当作UTF-16编码的值
