@@ -1,3 +1,4 @@
 {
-
+  root: './'
+  title: 'ECMAScript 2017 翻译',
 }
