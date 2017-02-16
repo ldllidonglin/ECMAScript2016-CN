@@ -109,5 +109,118 @@ StrUnsignedDecimalLiteral:::
   * Infinity和-infinity被认为是字符串数值常量，不是数值常量
 
 ###### 7.1.3.1.1 运行过程
+总的来说，把String转换为Number和确定一个数字字符串的数值类似，但是在细节上还是有一些区别，所以整个处理过程在这里给出。确定其数值有两步：首先，一个数值是从字符串数值来的，第二，以下面所描述的方式对数值进行舍入。任何下面没有提供语法的都在11.8.3.1中提供了。
+
+* [empty] 是0
+* 空白符是0
+* "空白符*数值常量*空白符" 是数值常量的数值
+* 二进制、八进制、十进制、十六进制数字字符串是 这个字符串的数值
+* 无符号整型 是无符号整型的数学值
+* “ + 无符号整型”是无符号整型的数学值
+* “ - 无符号整型”是无符号整型的数学值的负数（注意，如果无符号整型是0，那它的负数也是0，下面的规则会描述把无符号数字0转换为+0或者-0的舍入规则）
+* Infinity是10^10000（值太大，舍入为  +∞）
+* “十进制数 . ” 的数学值是十进制数
+* “十进制数 . 十进制数” 的数学值是第一个十进制数加第二个十进制数*10^-n，其中n是第二个十进制数的数字个数
+* “十进制数 . 指数部分” 的数学值是十进制数的数学值*10^e，其中e是指指数部分的数学值
+* “十进制数 . 十进制数 指数部分” 的数学值是第一个十进制数加（第二个十进制数*10^-n）,然后再乘以10^e，其中其中n是第二个十进制数的数字个数，e是指指数部分的数学值
+* “ . 十进制数” 是这个十进制数乘以10^-n，其中n是第二个十进制数的数字个数
+* “ . 十进制数 指数部分” 数学值是十进制数乘以10^e-n，其中n是第二个十进制数的数字个数，e是指指数部分的数学值
+* 十进制数 的数字值是这个十进制数的数字值
+* “十进制数 指数部分” 数学值是十进制数乘以10^e，其中e是指数部分
+
+一旦一个字符串数值常量的数学值被确定了，那就会被舍入为一个Number类型值。如果其数学值是0，那舍入的值为 +0 ，除非字符串数数值常量前第一个非空白符是“-”，这时就会被舍入为-0。否则舍入值必须是如6.1.6中规定的这个数学值的Number类型值，除非这个字符串包含无符号十进制数并且有效数字个数大于20，在这个情况下，要么是把20位以后的值用0替换，或者20位以后的值用0替换，并且在第20位数字加1。一个数字是否是有效数字判断条件就是首先不是指数部分，并且不是0或者它左边有一个非零数字，右边有一个非零或者非指数部分的数字
+
+#### 7.1.4 ToInteger ( argument )
+ToInteger这个抽象操作把argument转换为一个整数，抽象操作的操作过程如下：
+
+1. 让 number 是ToNumber(argument)的值
+2. 如果 number 是NaN，返回 +0
+3. 如果是 +0，-0，+∞， -∞,返回number
+4. 返回和number同样符号，并且大小是floor(abs(number))
+
+#### 7.1.5 ToInt32 ( argument )
+ToInt32这个抽象操作把argument转换为-2^31到2^31-1这个闭区间范围内的共2^32个整数，这个抽象操作的操作过程如下：
+
+1. 让number是ToNumber(argument)
+2. 如果number是NaN,+0,-0,+∞,-∞,染回+0
+3. 让int是和number同样符号，大小是floor(abs(number))
+4. 让int32bit是int modulo 2^32
+5. 如果int32bit >= 2^31，返回int32bit - 2^32；否则返回int32bit
+
+> 注意：鉴于上述ToInt32的定义：
+* ToInt32这个抽象操作是幂等的：如果通过步骤得到一个值，那同样操作再执行一遍，得到的结果是不变的
+* 对于任意的x值，ToInt32(ToInt32(x))得到的值和ToInt32(x)得到的值是一样的（It is to preserve this latter property that +∞ and -∞ are mapped to +0.)。
+* ToInt32把-0映射为+0
+
+#### 7.1.6 ToUint32 ( argument )
+ToUnit32这个抽象操作把argument转换为 0 到 2^32-1 这个闭区间范围内的共2^32个整数。这个抽象操作的操作过程如下：
+1. 让number是ToNumber(argument)
+2. 如果number是NaN,+0,-0,+∞,-∞,染回+0
+3. 让 int 是和number同样符号，大小是floor(abs(number))
+4. 让 int32bit 是int modulo 2^32
+5. 返回 int32bit
+
+> 注意：鉴于上述ToUint32的定义：
+* 第五步是和ToInt32的唯一区别
+* ToUint32这个抽象操作是幂等的：如果通过步骤得到一个值，那同样操作再执行一遍，得到的结果是不变的
+* 对于任意的x值，ToUint32(ToUint32(x))得到的值和ToUint32(x)得到的值是一样的（It is to preserve this latter property that +∞ and -∞ are mapped to +0.)。
+* ToUint32把-0映射为+0
+
+#### 7.1.7 ToInt16 ( argument )
+ToInt16 这个抽象操作把argument转换为 -32767 到 32767 这个闭区间范围内的共2^16个整数。这个抽象操作的操作过程如下：
+
+1. 让 number 是ToNumber(argument)
+2. 如果 number 是NaN,+0,-0,+∞,-∞,染回+0
+3. 让 int 是和 number 同样符号，大小是floor(abs(number))
+4. 让 int16bit 是int modulo 2^16
+5. 如果int16bit >= 2^15，返回int16bit - 2^16；否则返回int16bit
+
+#### 7.1.8 ToUint16 ( argument )
+ToUint16 这个抽象操作把argument转换为 0 到 2^16-1 这个闭区间范围内的共2^16个整数。这个抽象操作的操作过程如下：
+
+1. 让 number 是ToNumber(argument)
+2. 如果 number 是NaN,+0,-0,+∞,-∞,染回+0
+3. 让 int 是和 number 同样符号，大小是floor(abs(number))
+4. 让 int16bit 是int modulo 2^16
+5. 返回int16bit
+
+> 注意：鉴于上述给出的ToUint16定义：
+* 第四步中的把2^32换成2^16是ToUint32和ToUint16唯一的区别
+* ToUint16映射 -0 为 +0
+
+#### 7.1.9 ToInt8 ( argument )
+ToInt8 这个抽象操作把argument转换为 -128 到 127 这个闭区间范围内的共2^8个整数。这个抽象操作的操作过程如下：
+
+1. 让 number 是ToNumber(argument)
+2. 如果 number 是NaN,+0,-0,+∞,-∞,染回+0
+3. 让 int 是和 number 同样符号，大小是floor(abs(number))
+4. 让 int8bit 是int modulo 2^8
+5. 如果int8bit >= 2^7，返回int16bit - 2^8；否则返回int8bit
+
+#### 7.1.10 ToUint8 ( argument )
+ToUint8 这个抽象操作把argument转换为 0 到 255 这个闭区间范围内的共2^8个整数。这个抽象操作的操作过程如下：
+
+1. 让 number 是ToNumber(argument)
+2. 如果 number 是NaN,+0,-0,+∞,-∞,染回+0
+3. 让 int 是和 number 同样符号，大小是floor(abs(number))
+4. 让 int8bit 是int modulo 2^8
+5. 返回int8bit
+
+#### 7.1.11 ToUint8Clamp ( argument )
+ToUint8 这个抽象操作把argument转换为 0 到 255 这个闭区间范围内的共2^8个整数。这个抽象操作的操作过程如下：
+
+1. 让 number 是ToNumber(argument)
+2. 如果 number 是NaN，返回 +0
+3. 如果 number <= 0，返回 +0
+4. 如果 number >= 255，返回 255
+5. 让 f 是floor(number)
+6. 如果 f + 0.5 < number，那么返回 f + 1
+7. 如果 number < f + 0.5，返回 f
+8. 如果 f 是奇数，返回 f + 1
+9. 返回 f
+
+> 注意：不像ECMASCript中其他的转换抽象操作一样，ToUnit8Clamp的舍入不仅仅是缩短非整数并且没有把  +∞ 转为0.ToUint8Clamp是舍入为偶数，这是和Math.round四舍五入法所不同的地方
+
+
 
 
