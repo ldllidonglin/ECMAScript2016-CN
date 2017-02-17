@@ -6,6 +6,7 @@
 * [第四章：概述](4/4-Overview.md)
 * [第五章：符号约定](5/5-Notational-Conventions.md)
 * [第六章：数据类型和值](6/6-Data-Types-and-Values.md)
+ + [6.1 ECMAScript语言类型](6/6.1-ECMAScript-Language-Types.md)
 * [第七章：抽象操作](7/7-Abstract-Operations.md)
   + [7.1 类型转换](7/7.1-Type-Conversion.md)
 * [第八章：可执行代码和执行上下文](8/8-Executable-Code-and-Execution-Contexts.md)
