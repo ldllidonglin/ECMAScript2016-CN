@@ -1,15 +1,17 @@
 # Summary
 
+* [Introduction](README.md)
 * [第一章：简介](1/1-Scope.md)
 * [第二章：一致性](2/2-Conformance.md)
 * [第三章：引用标准](3/3-Normative-References.md)
 * [第四章：概述](4/4-Overview.md)
 * [第五章：符号约定](5/5-Notational-Conventions.md)
 * [第六章：数据类型和值](6/6-Data-Types-and-Values.md)
-  + [6.1 ECMAScript语言类型](6/6.1-ECMAScript-Language-Types.md)
+  * [6.1 ECMAScript语言类型](6/6.1-ECMAScript-Language-Types.md)
 * [第七章：抽象操作](7/7-Abstract-Operations.md)
-  + [7.1 类型转换](7/7.1-Type-Conversion.md)
+  * [7.1 类型转换](7/7.1-Type-Conversion.md)
 * [第八章：可执行代码和执行上下文](8/8-Executable-Code-and-Execution-Contexts.md)
+  * [8.1 词法环境](8/8-Executable-Code-and-Execution-Contexts/8.1.md)
 * [第九章：普通和包装对象行为](9/9-Ordinary-and-Exotic-Objects-Behaviours.md)
 * [第十章：源代码](10/10-Source-Code.md)
 * [第十一章：词法语法](11/11-Lexical-Grammar.md)
@@ -36,6 +38,4 @@
 * [附录E: 导致与之前版本不兼容的改变与新增内容](AppendixE.md)
 * [附录F: 参考书目](AppendixF.md)
 * [附录G: 版权和软件许可](AppendixG.md)
-
-
 
