@@ -29,6 +29,7 @@
 * [第二十三章：键值类型](23/23-Keyed-Collection.md)
 * [第二十四章：数据格式化](24/24-Structured-Data.md)
 * [第二十五章：控制抽象对象](25/25-Control-Abstraction-Objects.md)
+  * [25.4 Promise对象](25/25.4-Promise-Object.md)
 * [第二十六章：反射](26/26-Reflection.md)
 * [第二十七章：内存模型](27/27-Memory-Model.md)
 * [附录A: 语法摘要](AppendixA.md)
