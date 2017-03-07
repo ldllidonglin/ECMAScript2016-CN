@@ -11,6 +11,7 @@
   * [6.2 ECMAScript规范类型](6/6.2-ECMAScript-Specification-Types.md)
 * [第七章：抽象操作](7/7-Abstract-Operations.md)
   * [7.1 类型转换](7/7.1-Type-Conversion.md)
+  * [7.2 验证和比较操作](7/7.2-Testing-and-Comparison-Operations.md)
 * [第八章：可执行代码和执行上下文](8/8-Executable-Code-and-Execution-Contexts.md)
   * [8.1 词法环境](8/8-Executable-Code-and-Execution-Contexts/8.1.md)
 * [第九章：普通和包装对象行为](9/9-Ordinary-and-Exotic-Objects-Behaviours.md)
