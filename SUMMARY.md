@@ -19,6 +19,7 @@
 * [第九章：普通和包装对象行为](9/9-Ordinary-and-Exotic-Objects-Behaviours.md)
 * [第十章：源代码](10/10-Source-Code.md)
 * [第十一章：词法语法](11/11-Lexical-Grammar.md)
+  * [11.9 自动插入分号](11/11.9-Automatic-Semicolon-Insertion.md)
 * [第十二章：表达式](12/12-Expressions.md)
 * [第十三章：语句和声明](13/13-Statements-and-Declarations.md)
 * [第十四章：函数和类](14/14-Functions-and-Classes.md)
