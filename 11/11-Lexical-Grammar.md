@@ -12,6 +12,7 @@ ECMAScript脚本或者模块首先会被转换为一序列的输入元素，这�
   ```
   a = b / hi / g.exec(c).map(d);
   ```
+
 ##### 语法
 ```
 InputElementDiv::
