@@ -25,6 +25,8 @@
   * [11.4 注释](11/11.4-Comments.md)
   * [11.5 Tokens](11/11.5-Tokens.md)
   * [11.6 名称和保留字](11/11.6-Names-and-Keywords.md)
+  * [11.7 标点符号](11/11.7-Punctuators.md)
+  * [11.8 字面量](11/11.8-Literals.md)
   * [11.9 自动插入分号](11/11.9-Automatic-Semicolon-Insertion.md)
 * [第十二章：表达式](12/12-Expressions.md)
 * [第十三章：语句和声明](13/13-Statements-and-Declarations.md)
