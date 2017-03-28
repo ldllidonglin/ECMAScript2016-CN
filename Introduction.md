@@ -1,0 +1,26 @@
+# Introduction
+这个Ecma标准定义了ECMAScript 2016 语言。这是ECMAScript 语言规范的第七版。自从1997年发布第一版以来，ECMAScript已经成为这个世界上最流行的通用编程语言。它是嵌入网络浏览器中最知名的语言，同时也被广泛采用在服务器和嵌入式应用程序。
+
+ECMAScript建立在一些原始技术之上，最为著名的就是JavaScript(网景)和JScript (微软)。这门语言由网景的Brendan Eich发明，并且第一次出现在这个公司的Navigator 2.0浏览器上。接着它出现在所有Netscape后来的浏览器以及微软从Internet Explorer 3.0之后的所有浏览器上。
+
+这一标准的编制自1996年十一月开始。Ecma标准的第一个版本被1997年六月召开的Ecma General Assembly采纳。
+
+上述Ecma标准被以快速跟进流程提交至ISO/IEC JTC 1，并作为于1998年四月作为ISO/IEC 16262通过。1998年六月Ecma General Assembly通过了ECMA-262第二版以保持它与ISO/IEC 16262的完全一致性。第一版到第二版的变更仅仅是编辑性质的。
+
+第三版标准引入了强大的正则表达式，更佳的字符串处理，新的控制语句，try/catch异常处理，更严谨的错误定义，格式化的数字输出以及一些为国际化和未来语言成长预留的小变更。ECMAScript标准的第三版被1999年十二月召开的Ecma General Assembly采纳并于2002年六月作为ISO/IEC 16262:2002发布。
+
+自第三版发布以来，ECMAScript因其与万维网的关联而获得了广泛采用，它已经成为所有web浏览器实质上都提供的一种编程语言。为了编制第四版ECMAScript，做了很多有意义的工作。尽管这工作没能完成而且也没有作为ECMAScript的第四版发布，但是其中一部分被编写进了第六版。
+
+ECMAScript第五版（发布为ECMA-262 5<sup>th</sup> edition）纸面化了很多事实上已经在浏览器形成共识的语言规范解析并且增加了对自第三版发布以来的新功能的支持。这些功能包括访问器属性，反射创建以及对象检测，属性特性的程序控制，新增的数组操作函数，JSON对象编码格式，以及提供了改进的错误检查以及程序安全性的严格模式。第五版被2011年6月的Ecma General Assembly 所采纳。
+
+随着第五版在2009年的发布，就开始聚焦于第六版的编制了。然而，在这之前还要算上从1999年第三版发布之后的各种具有重要意义的实验和语言改进设计。在真正意义上，第六版的完成是15年努力的结晶。这一次的改进包括了为大型应用提供更好的支持，库创建，以及使ECMAScript成为其他语言的编译目标。主要的改进有：modules、class声明、作用域、迭代器和生成器、为异步程序的promise，解构赋值模式、尾调用优化。ECMAScript 内置库扩展到支持额外的抽象数据结构，包括maps、sets、二进制数值数组,以及额外的支持Unicode补充字符在字符串和正则表达式。构造也通过继承变的可扩展。第六版提供了常规的基础，以及增加了语言和库的增强。第六版被2015年6月召开的Ecma General Assembly 所采纳。
+
+这个ECMAScript规范是Ecma TC39委员会新制定的逐年发布以及开放式编制的进程的第一版。放在GitHub上的ECMAScript2015的一个存文本源文档作为未来编制的基础。进过一年的标准编制，成百上千的pull request和issues代表着上万的bug修复和其他改进。另外，众多软件工具被开发用于援助标准的制定，比如 Ecmarkup, Ecmarkdown, 和 Grammarkdown。本规范还包括支持了一种新的幂运算以及为Array.prototype添加了一个名为includes的新函数。
+
+数十个个人代表着许多组织为Ecma TC39编制这一版和之前的版本作出了非常重要的贡献。此外，出现了一个非常有活力的社区支持TC39的成就。这个社区有了无数的草案，提交了成千上万的bug报告，进行了改进实验，实现了测试程序,培养了全球范围内的ECMAScript开发者社区。抱歉这里不能一一列出所有作出了贡献的个人以及组织
+
+Allen Wirfs-Brock
+ECMA-262, 6th Edition Project Editor
+
+Brian Terlson
+ECMA-262, 7th Edition Project Editor
