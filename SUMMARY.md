@@ -6,6 +6,8 @@
 * [第二章：一致性](2/2-Conformance.md)
 * [第三章：引用标准](3/3-Normative-References.md)
 * [第四章：概述](4/4-Overview.md)
+  * [4.1 Web脚本语言](4/4.1-Web-Scripting.md)
+  * [4.2 ECMAScript概述](4/4.2-ECMAScript-Overview.md)
 * [第五章：符号约定](5/5-Notational-Conventions.md)
 * [第六章：数据类型和值](6/6-Data-Types-and-Values.md)
   * [6.1 ECMAScript语言类型](6/6.1-ECMAScript-Language-Types.md)
