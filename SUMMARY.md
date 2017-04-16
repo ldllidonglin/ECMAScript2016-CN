@@ -11,6 +11,7 @@
   * [4.3 术语和定义](4/4.3-Terms-And-Definitions.md)
   * [4.4 本规范的组织方式](4/4.4-Organization-Of-This-Specification.md)
 * [第五章：符号约定](5/5-Notational-Conventions.md)
+  * [5.1 句法和词法语法](5/5.1-Syntactic-and-Lexical-Grammars.md)
 * [第六章：数据类型和值](6/6-Data-Types-and-Values.md)
   * [6.1 ECMAScript语言类型](6/6.1-ECMAScript-Language-Types.md)
   * [6.2 ECMAScript规范类型](6/6.2-ECMAScript-Specification-Types.md)
