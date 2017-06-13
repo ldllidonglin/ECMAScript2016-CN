@@ -21,7 +21,7 @@
   * [7.3 对象上的相关操作](7/7.3-Operations-on-Objects.md)
   * [7.4 遍历器上的相关操作](7/7.4-Operations-on-Iterator-Objects.md)
 * [第八章：可执行代码和执行上下文](8/8-Executable-Code-and-Execution-Contexts.md)
-  * [8.1 词法环境](8/8-Executable-Code-and-Execution-Contexts/8.1.md)
+  * [8.1 词法环境](8/8.1-Lexical-Environments.md)
 * [第九章：普通和包装对象行为](9/9-Ordinary-and-Exotic-Objects-Behaviours.md)
 * [第十章：源代码](10/10-Source-Code.md)
 * [第十一章：词法语法](11/11-Lexical-Grammar.md)
