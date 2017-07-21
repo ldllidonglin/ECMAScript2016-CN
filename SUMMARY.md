@@ -50,6 +50,7 @@
 * [第十七章：ECMAScript标准内置对象](17/17-ECMAScript-Standard-Buildin-Objects.md)
 * [第十八章：全局对象](18/18-The-Global-Objects.md)
 * [第十九章：基本对象](19/19-Fundamental-Objects.md)
+  * [19.2 函数对象](19/19.2-Function-Objects.md)
 * [第二十章：数字和日期](20/20-Numbers-and-Dates.md)
 * [第二十一章：文本处理](21/21-Text-Processing.md)
 * [第二十二章：索引集合类](22/22-Indexed-Collections.md)
