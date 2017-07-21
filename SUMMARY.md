@@ -49,7 +49,7 @@
 * [第十六章：错误处理和语言扩展](16/16-Error-Handling-and-Language-Extensions.md)
 * [第十七章：ECMAScript标准内置对象](17/17-ECMAScript-Standard-Buildin-Objects.md)
 * [第十八章：全局对象](18/18-The-Global-Objects.md)
-* [第十九章：基本对象](19/19-Fundamental-Objects.md)
+* [第十九章：基本对象](19/19-Fundamental-Objects.md)  
   * [19.2 函数对象](19/19.2-Function-Objects.md)
 * [第二十章：数字和日期](20/20-Numbers-and-Dates.md)
 * [第二十一章：文本处理](21/21-Text-Processing.md)
