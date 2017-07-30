@@ -60,7 +60,7 @@
   * [12.15 赋值操作符](12/12.15-Assignment-Operators.md)
   * [12.16 逗号操作符](12/12.16-Comma-Operator.md)
 * [第十三章：语句和声明](13/13-Statements-and-Declarations.md)
-  * [13.1-Statement-Semantics](13/13-Statements-and-Declarations/131-statement-semantics.md)
+  * [13.1-Statement-Semantics](13/13.1-statement-semantics.md)
 * [第十四章：函数和类](14/14-Functions-and-Classes.md)
 * [第十五章：脚本和模块](15/15-Scripts-and-Modules.md)
 * [第十六章：错误处理和语言扩展](16/16-Error-Handling-and-Language-Extensions.md)
