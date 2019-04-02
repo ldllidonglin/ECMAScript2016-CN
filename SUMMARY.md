@@ -71,7 +71,7 @@
 * [第二十章：数字和日期](20/20-Numbers-and-Dates.md)
 * [第二十一章：文本处理](21/21-Text-Processing.md)
 * [第二十二章：索引集合类](22/22-Indexed-Collections.md)
-  * [22.1-Array-Objects.md](22/22-Indexed-Collections/221-array-objectsmd.md)
+  * [22.1-数组对象](22/22-Indexed-Collections/22.1-Array-Objects.md)
 * [第二十三章：键值类型](23/23-Keyed-Collection.md)
 * [第二十四章：数据格式化](24/24-Structured-Data.md)
 * [第二十五章：控制抽象对象](25/25-Control-Abstraction-Objects.md)
